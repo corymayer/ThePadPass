@@ -12,11 +12,15 @@ class BarcodeScanner extends React.Component {
                 position: 'relative'
             }}>
                 <video className="videoCamera" autoPlay={true} preload="auto" src="" muted={true}
-                        playsInline={true}></video>
+                        playsInline={true} style={{
+                            width: "100%"
+                        }}>
+                </video>
                 <canvas className="drawingBuffer" style={{
                     position: "absolute",
                     top: 0,
                     left: 0,
+                    width: "100%"
                 }}></canvas>
             </div>
         )
@@ -30,17 +34,12 @@ class BarcodeScanner extends React.Component {
               target: document.querySelector('#barcodeScannerView'),
             },
             decoder : {
-              readers : ["code_128_reader"],
-              debug: {
-                drawBoundingBox: true,
-                drawScanline: true,
-                showPattern: true,
-                showFrequency: false
-                }
+              readers : ["code_128_reader"]
             },
             numOfWorkers: cpus().length,
             multiple: false,
-            locate: true
+            locate: true,
+            frequency: 10
         }, function(err) {
             if (err) {
                 console.log(err);
@@ -75,7 +74,7 @@ class BarcodeScanner extends React.Component {
         });
 
         let onDetected = (result) => {
-            Quagga.offDetected(this);
+            Quagga.offDetected(onDetected);
             Quagga.stop();
             this.props.onFoundBarcode(result.codeResult.code);
         }

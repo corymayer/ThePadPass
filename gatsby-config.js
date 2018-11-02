@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'The Pad Climbing Apple Wallet Pass',
+    title: 'The Pad Apple Wallet Pass',
   },
   pathPrefix: "/ThePadPass",
   plugins: [
