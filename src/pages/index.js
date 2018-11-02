@@ -1,18 +1,19 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import BarcodeScanner from '../components/barcode-scanner'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
+    <h1>Create Pass</h1>
+    <p>Welcome! Scan your membership card here to generate a pass for 
+      Apple Wallet.</p>
+    <div>
+      <BarcodeScanner onFoundBarcode={(barcode) => {
+        alert("Found barcode: " + barcode);
+      }} />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
 

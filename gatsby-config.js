@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'The Pad Climbing Apple Wallet Pass',
   },
   pathPrefix: "/ThePadPass",
   plugins: [
@@ -20,10 +20,10 @@ module.exports = {
         name: 'gatsby-starter-default',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: 'rgb(248, 152, 31)',
+        theme_color: 'rgb(248, 152, 31)',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/pad-id-card.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',
