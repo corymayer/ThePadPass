@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -34,12 +34,12 @@ const Layout = ({ children }) => (
             margin: '0 auto',
             maxWidth: 700,
             padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
+            paddingTop: 0
           }}
         >
           {children}
         </div>
-      </>
+      </div>
     )}
   />
 )

@@ -197,8 +197,9 @@ html {
   box-sizing: inherit;
 }
 body {
+  background-color: #fafafa;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
