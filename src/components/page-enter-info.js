@@ -17,6 +17,7 @@ class PageEnterInfo extends React.Component {
                     </Typography>
                     <TextField name="name" placeholder="Full name" 
                                required="true" autoComplete="name"
+                               defaultValue={ this.props.previousName }
                                onChange={ (event) => {
                                    this.props.onNameChange(event.target.value);
                                } }>

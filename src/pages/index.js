@@ -60,6 +60,7 @@ class IndexPage extends React.Component {
         }} />;
       case 1:
         return <PageEnterInfo curBarcode={ this.state.curBarcode }
+                              previousName={ this.state.curName }
                               onNameChange={(name) => {
           this.setState({ curName: name }) 
         }} />;
