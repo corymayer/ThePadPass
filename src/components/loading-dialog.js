@@ -23,7 +23,7 @@ class LoadingDialog extends React.Component {
 
             <DialogContentText id="alert-dialog-description">
               If this takes more than a 10 seconds, feel free to refresh the page.
-              <div style={{ width: "100%", height: 8 }} />
+              <div style={{ width: "100%", height: 6 }} />
               <code>{ this.props.code }</code>
             </DialogContentText>
           </DialogContent>

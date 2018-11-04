@@ -74,7 +74,6 @@ class BarcodeScanner extends React.Component {
         });
 
         let onDetected = (result) => {
-            Quagga.offDetected(onDetected);
             Quagga.stop();
             this.props.onFoundBarcode(result.codeResult.code);
         }
