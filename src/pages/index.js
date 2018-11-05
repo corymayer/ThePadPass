@@ -1,5 +1,6 @@
 import React from 'react'
 // import { Link } from 'gatsby'
+import ReactGA from 'react-ga';
 
 import Layout from '../components/layout'
 import LoadingDialog from '../components/loading-dialog'
@@ -11,6 +12,8 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
 const passGenerateURLBase = "https://qsohh8av3a.execute-api.us-west-2.amazonaws.com/dev?";
+
+ReactGA.initialize('UA-109935078-1');
 
 class IndexPage extends React.Component {
   state = {
@@ -112,6 +115,10 @@ class IndexPage extends React.Component {
                           open={ this.state.loadingDialogOpen } />
       </Layout>
     )
+  }
+
+  componentDidMount() {
+    ReactGA.pageview('/');
   }
 }
 
