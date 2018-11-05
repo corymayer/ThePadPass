@@ -16,6 +16,9 @@ class PageFinished extends React.Component {
                         close to the gym. You can use it wherever you normally
                         use your card.
                     </Typography>
+                    <Typography component="p" variant="body1" gutterBottom>
+                        NOTE: You may need to hold the pass upside down to scan it 🙃
+                    </Typography>
                 </div>
             </React.Fragment>
         )
